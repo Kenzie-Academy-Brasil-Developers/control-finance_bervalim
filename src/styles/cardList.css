@@ -13,8 +13,47 @@
   width: 100%;
   justify-content: space-between;
   max-width: 100%;
+  background-color: #ffff;
+  border: 2px solid var(--color-grey-5);
+  border-radius: var(--radius-1);
+  padding: 8px 16px;
+}
+
+.card__content > p {
+  color: var(--color-grey-1);
+  font-weight: var(--font-weight-2);
+  font-size: var(--font-size-3);
 }
 
 .card__buttons {
   display: flex;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.exit__button {
+  padding: 15px 18px;
+  background-color: var(--color-grey-4);
+  border-radius: var(--radius-2);
+  width: 68px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-grey-4);
+  color: var(--color-grey-2);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-2);
+}
+
+.garbage__button {
+  border-radius: var(--radius-2);
+  background-color: #ffff;
+  padding: 0 13px;
+  border: 1.5px solid var(--color-grey-5);
+  width: 28px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -17,6 +17,7 @@ const renderList = (array) => {
     // Adicionando as classes nos elementos
 
     listItemCard.classList.add("card__item");
+    exitButton.classList.add("exit__button");
     divCardContent.classList.add("card__content");
     paragraphContent.innerText = `R$ ${card.value
       .toFixed(2)
