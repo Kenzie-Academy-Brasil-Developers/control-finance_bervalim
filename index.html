@@ -14,13 +14,91 @@
       name="description"
       content="Control Finance - Seu controle financeiro"
     />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/globalStyles.css" />
-    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/financialResume.css" />
+    <link rel="stylesheet" href="./src/styles/sumValues.css" />
+    <link rel="stylesheet" href="./src/styles/cardList.css" />
   </head>
   <body>
-    <main id="app"></main>
-    <script src="./src/scripts/modal.js"></script>
+    <header class="header__container">
+      <div class="header__content">
+        <p><span id="header__purple">Control</span> Finance</p>
+        <button class="insert__value">Registrar novo valor</button>
+      </div>
+    </header>
+    <main id="app" class="container">
+      <section class="financial__resume">
+        <div class="financial__title"><h3>Resumo Financeiro</h3></div>
+        <div class="financial__inputs">
+          <button class="financial__buttons" id="all">Todos</button>
+          <button class="financial__buttons" id="0">Entradas</button>
+          <button class="financial__buttons" id="1">Saídas</button>
+        </div>
+      </section>
+      <section class="sumOfValues">
+        <p>Soma dos valores</p>
+        <span id="sumValue"></span>
+      </section>
+      <section class="noEntrance">
+        <h3>Sem nenhum valor na categoria Entrada</h3>
+        <p>Registrar novo valor</p>
+      </section>
+      <ul class="card__list">
+        <!-- <li class="card__item">
+          <div class="card__content">
+            <p>R$ 80,00</p>
+          </div>
+          <div class="card__buttons">
+            <button class="exitButton">Saida</button>
+            <button class="garbageButton">
+              <img src="./src/assets/trash.svg" />
+            </button>
+          </div>
+        </li> -->
+      </ul>
+    </main>
+    <dialog class="modal__controller">
+      <div class="modal__container">
+        <div class="modal__registration">
+          <h3>Registro de valor</h3>
+          <button class="modal__close">X</button>
+        </div>
+        <form>
+          <div class="modal__input">
+            <label>R$</label>
+            <input type="number" class="input__trasaction" />
+          </div>
+          <div class="modal__value">
+            <p>Tipo de valor</p>
+            <input
+              hidden
+              type="radio"
+              id="entrada"
+              name="categoryId"
+              value="0"
+            />
+            <label for="entrada">Entrada</label>
+            <input
+              hidden
+              type="radio"
+              id="saida"
+              class="teste1"
+              name="categoryId"
+              value="1"
+            />
+            <label for="saida">Saída</label>
+          </div>
+          <div class="modal__buttons">
+            <button class="modal__button--outline">Cancelar</button>
+            <button class="modal__button--purple">Criar</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
     <script src="./src/scripts/valuesData.js"></script>
     <script src="./src/scripts/index.js"></script>
+    <script src="./src/scripts/modal.js"></script>
   </body>
 </html>

@@ -1,0 +1,39 @@
+.header__container {
+  background-color: var(--color-grey-5);
+  width: 100vw;
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 43rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.header__content > p {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-1);
+}
+#header__purple {
+  color: var(--color-brand-1);
+}
+
+.insert__value {
+  border-radius: var(--radius-1);
+  background-color: var(--color-brand-1);
+  color: var(--fixed-white);
+  font-size: var(--font-size-3);
+  padding: 5px 15px;
+  border: 1.5px solid var(--color-brand-1);
+  cursor: pointer;
+  font-weight: var(--font-weight-1);
+}
+
+.insert__value:hover {
+  background-color: var(--color-brand-2);
+}

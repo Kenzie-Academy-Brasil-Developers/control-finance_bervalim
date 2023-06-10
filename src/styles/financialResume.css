@@ -1,0 +1,28 @@
+.financial__resume {
+  margin-top: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.financial__inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.financial__title > h3 {
+  font-weight: var(--font-weight-2);
+  font-size: var(--font-size-2);
+  color: var(--color-grey-1);
+}
+
+.financial__buttons {
+  border-radius: var(--radius-1);
+  background-color: #ffffff;
+  border: 2px solid var(--color-grey-5);
+  padding: 5px 15px;
+  border-radius: var(--radius-1);
+  cursor: pointer;
+  color: var(--color-grey-2);
+  font-weight: var(--font-weight-1);
+  font-size: var(--font-size-3);
+}
