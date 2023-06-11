@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./src/styles/sumValues.css" />
     <link rel="stylesheet" href="./src/styles/cardList.css" />
     <link rel="stylesheet" href="./src/styles/modal.css" />
+    <link rel="stylesheet" href="./src/styles/animationModal.css" />
   </head>
   <body>
     <header class="header__container">
@@ -75,8 +76,10 @@
         <form>
           <div class="modal__input">
             <h3>Valor</h3>
-            <label>R$</label>
-            <input type="number" class="input__trasaction" />
+            <div class="input__content">
+              <label>R$ <span id="input__money">00.00</span></label>
+              <input type="number" class="input__trasaction" />
+            </div>
           </div>
           <div class="modal__value">
             <p>Tipo de valor</p>
