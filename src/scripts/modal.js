@@ -18,6 +18,7 @@ const openModal = () => {
 
 const handleModalForm = () => {
   const createButton = document.querySelector(".modal__button--purple");
+  const modal__controller = document.querySelector(".modal__controller");
 
   createButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -27,12 +28,14 @@ const handleModalForm = () => {
     const inputRadioTransaction = document.querySelector(
       "input[type='radio']:checked"
     );
+
     let newTransaction = {
       id: insertedValues.length + 1,
       value: inputTransaction,
       categoryID: inputRadioTransaction.value,
     };
     insertedValues.push(newTransaction);
+    modal__controller.close();
     renderList(insertedValues);
   });
 };
@@ -45,6 +48,7 @@ const closeModal = () => {
     modalController.close();
   });
 };
+
 openModal();
 closeModal();
 handleModalForm(insertedValues);

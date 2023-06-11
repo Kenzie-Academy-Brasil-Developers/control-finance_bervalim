@@ -1,6 +1,6 @@
 .modal__controller {
   width: 428px;
-  height: 23.125rem;
+  height: 20rem;
   animation: modalAnimation 0.2s;
   margin: 180px auto;
   padding: 0;
@@ -14,7 +14,7 @@
 
 .modal__container {
   width: 428px;
-  height: 23.125rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -47,7 +47,10 @@
   border: none;
   cursor: pointer;
 }
-
+.modal__close:hover {
+  background-color: #adb5bd;
+  color: #fff;
+}
 .modal__text {
   margin-top: 12px;
 }
@@ -88,4 +91,72 @@
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.input__trasaction::-webkit-outer-spin-button,
+.input__trasaction::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal__value {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+.modal__value > p {
+  font-weight: var(--font-weight-2);
+  font-size: var(--font-size-3);
+  color: var(--color-grey-1);
+}
+
+.entrancy,
+.exit {
+  border: 1.5px solid var(--color-grey-5);
+  border-radius: var(--radius-1);
+  padding: 5px 14px;
+  background-color: #ffff;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-1);
+  color: var(--color-grey-2);
+  cursor: pointer;
+}
+
+.modal__buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.modal__button--outline {
+  background-color: var(--color-grey-4);
+  border-radius: var(--radius-1);
+  border: 1.5px solid var(--color-grey-4);
+  padding: 7px 14px;
+  cursor: pointer;
+  font-weight: var(--font-weight-1);
+  font-size: var(--font-size-3);
+  color: var(--color-grey-2);
+}
+
+.modal__button--outline:hover {
+  background-color: #adb5bd;
+}
+.modal__button--purple {
+  padding: 7px 14px;
+  cursor: pointer;
+  border: 1.5px solid var(--color-brand-2);
+  border-radius: var(--radius-1);
+  background-color: var(--color-brand-1);
+  font-weight: var(--font-weight-1);
+  font-size: var(--font-size-3);
+  color: #fff;
+}
+
+.modal__button--purple:hover {
+  background-color: var(--color-brand-2);
 }
