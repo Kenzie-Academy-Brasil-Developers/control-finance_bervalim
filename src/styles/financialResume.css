@@ -43,3 +43,12 @@
   font-weight: var(--font-weight-1);
   font-size: var(--font-size-3);
 }
+
+@media (max-width: 700px) {
+  .financial__resume {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}

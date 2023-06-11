@@ -64,3 +64,9 @@
 .garbage__image:hover {
   color: var(--color-grey-1);
 }
+
+@media (max-width: 700px) {
+  .card__item {
+    width: 93%;
+  }
+}

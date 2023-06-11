@@ -160,3 +160,94 @@
 .modal__button--purple:hover {
   background-color: var(--color-brand-2);
 }
+
+@media (max-width: 700px) {
+  .modal__controller {
+    width: 57%;
+    height: 26rem;
+  }
+
+  .modal__container {
+    width: 57%;
+    height: 26rem;
+  }
+
+  .modal__registration > h3 {
+    width: 160px;
+  }
+
+  .modal__text > p {
+    width: 300px;
+  }
+
+  .input__content {
+    width: 350px;
+  }
+
+  .modal__value {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .entrancy,
+  .exit {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal__buttons {
+    margin-top: 29px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal__button--outline,
+  .modal__button--purple {
+    width: 140px;
+  }
+}
+@media (min-width: 480px) and (max-width: 700px) {
+  .modal__controller {
+    width: 85%;
+    height: 26rem;
+  }
+
+  .modal__container {
+    width: 85%;
+    height: 26rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .modal__controller {
+    width: 85%;
+    height: 26rem;
+  }
+
+  .modal__container {
+    width: 85%;
+    height: 26rem;
+  }
+  .modal__registration > h3 {
+    width: 110px;
+  }
+  .modal__text > p {
+    width: 240px;
+  }
+
+  .input__content {
+    width: 290px;
+  }
+
+  .entrancy,
+  .exit {
+    width: 90%;
+  }
+
+  .modal__button--outline,
+  .modal__button--purple {
+    width: 120px;
+  }
+}
