@@ -45,7 +45,9 @@
   font-size: var(--font-size-4);
   font-weight: var(--font-weight-2);
 }
-
+.exit__button:hover {
+  color: var(--color-grey-1);
+}
 .garbage__button {
   border-radius: var(--radius-2);
   background-color: #ffff;
@@ -56,4 +58,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.garbage__image:hover {
+  color: var(--color-grey-1);
 }

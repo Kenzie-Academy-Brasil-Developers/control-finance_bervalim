@@ -2,10 +2,9 @@
 
 const renderList = (array) => {
   const unorderedListCard = document.querySelector(".card__list");
-
+  showAndCoverValues(insertedValues);
   unorderedListCard.innerHTML = "";
   array.forEach((card) => {
-    // Criando os elementos
     const listItemCard = document.createElement("li");
     const divCardContent = document.createElement("div");
     const paragraphContent = document.createElement("p");
@@ -13,8 +12,6 @@ const renderList = (array) => {
     const exitButton = document.createElement("button");
     const garbageButton = document.createElement("button");
     const garbageImage = document.createElement("img");
-
-    // Adicionando as classes nos elementos
 
     listItemCard.classList.add("card__item");
     exitButton.classList.add("exit__button");
@@ -27,6 +24,7 @@ const renderList = (array) => {
     garbageButton.classList.add("garbage__button");
 
     garbageImage.src = "../../src/assets/trash.svg";
+    garbageImage.classList.add("garbage__image");
     // Fazendo os appends:
     divCardContent.append(paragraphContent);
     divCardButtons.append(exitButton, garbageButton);
@@ -55,7 +53,6 @@ const arrayFilter = (array) => {
           (element) => element.categoryID == Number(button.id)
         );
         renderList(filteredArray);
-        // arraySum(filteredArray);
       }
     });
   });
@@ -77,14 +74,10 @@ const arraySum = (array) => {
   const sumValue = document.querySelector("#sumValue");
 
   sumValue.innerText = `R$${(totalEntrance - totalExits).toFixed(2)}`;
-
-  // sumValue.toFixed(2);
 };
 
 const handleDeleteButton = (array, item, button) => {
   button.addEventListener("click", (event) => {
-    // const cardId = Number(event.target.dataset.cardId);
-
     const indexArray = array.findIndex((element) => {
       return element.id === item.id;
     });
@@ -94,13 +87,33 @@ const handleDeleteButton = (array, item, button) => {
   });
 };
 
-// // if (insertVLues.lenth>0){
-//   display:block
-// }
-// else{
-//   display
-// }
+const makeFilterButtonsPurple = () => {
+  const filterButtons = document.querySelectorAll(".financial__buttons");
+
+  filterButtons.forEach((filterButton) => {
+    filterButton.addEventListener("click", () => {
+      if (filterButton.classList.contains("financial__buttons")) {
+        filterButton.classList.add("purple__buttons");
+        filterButton.classList.remove("financial__buttons");
+      } else {
+        filterButton.classList.add("financial__buttons");
+        filterButton.classList.remove("purple__buttons");
+      }
+    });
+  });
+};
+
+const showAndCoverValues = (array) => {
+  const registredValue = document.querySelector(".noEntrance");
+  console.log(array.length);
+  if (array.length > 0) {
+    registredValue.style.display = "none";
+  } else if (array.length == 0) {
+    registredValue.style.display = "block";
+  }
+};
 
 // // chamada da função
+makeFilterButtonsPurple();
 renderList(insertedValues);
 arrayFilter(insertedValues);
