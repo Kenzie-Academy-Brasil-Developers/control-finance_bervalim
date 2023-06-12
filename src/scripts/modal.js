@@ -4,15 +4,17 @@ const openModal = () => {
   const modalController = document.querySelector(".modal__controller");
   const registerValueButton = document.querySelector(".insert__value");
   const noEntranceSection = document.querySelector(".noEntrance");
-
+  const inputTransaction = document.querySelector(".input__trasaction");
   registerValueButton.addEventListener("click", () => {
     modalController.showModal();
     closeModal();
+    inputTransaction.value = "";
   });
 
   noEntranceSection.addEventListener("click", () => {
     modalController.showModal();
     closeModal();
+    inputTransaction.value = "";
   });
 };
 
