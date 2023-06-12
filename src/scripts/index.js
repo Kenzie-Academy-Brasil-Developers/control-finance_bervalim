@@ -23,7 +23,7 @@ const renderList = (array) => {
     garbageButton.dataset.cardId = card.id;
     garbageButton.classList.add("garbage__button");
 
-    garbageImage.src = "../../src/assets/trash.svg";
+    garbageImage.src = "./src/assets/trash.svg";
     garbageImage.classList.add("garbage__image");
     // Fazendo os appends:
     divCardContent.append(paragraphContent);
