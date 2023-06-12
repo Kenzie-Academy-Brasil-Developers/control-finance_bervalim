@@ -173,7 +173,7 @@
   }
 
   .modal__registration > h3 {
-    width: 160px;
+    white-space: nowrap;
   }
 
   .modal__text > p {
@@ -208,44 +208,65 @@
     width: 140px;
   }
 }
-@media (min-width: 480px) and (max-width: 700px) {
+@media (min-width: 480px) and (max-width: 1024px) {
   .modal__controller {
-    width: 85%;
+    width: 58%;
     height: 26rem;
   }
 
   .modal__container {
-    width: 85%;
+    width: 100%;
     height: 26rem;
   }
 }
-
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 380px) {
   .modal__controller {
-    width: 85%;
+    width: 28%;
     height: 26rem;
   }
 
   .modal__container {
-    width: 85%;
+    width: 100%;
+    height: 26rem;
+  }
+  .modal__text {
+    width: 10px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .modal__controller {
+    width: 88%;
+    height: 26rem;
+  }
+
+  .modal__container {
+    width: 100%;
     height: 26rem;
   }
   .modal__registration > h3 {
-    width: 110px;
+    width: 70px;
+    white-space: nowrap;
   }
-  .modal__text > p {
-    width: 240px;
+  .modal__text {
+    width: 100%;
   }
-
+  .modal__value {
+    align-items: center;
+  }
+  .modal__value > p {
+    align-self: flex-start;
+  }
   .input__content {
-    width: 290px;
+    width: 320px;
   }
 
   .entrancy,
   .exit {
     width: 90%;
   }
-
+  .modal__buttons {
+    margin-top: 30px;
+  }
   .modal__button--outline,
   .modal__button--purple {
     width: 120px;

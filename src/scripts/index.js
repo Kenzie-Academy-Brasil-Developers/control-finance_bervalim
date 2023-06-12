@@ -105,7 +105,7 @@ const makeFilterButtonsPurple = () => {
 
 const showAndCoverValues = (array) => {
   const registredValue = document.querySelector(".noEntrance");
-  console.log(array.length);
+
   if (array.length > 0) {
     registredValue.style.display = "none";
   } else if (array.length == 0) {
